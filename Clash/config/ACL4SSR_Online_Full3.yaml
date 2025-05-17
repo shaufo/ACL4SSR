@@ -1,0 +1,333 @@
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - 🚀 波池加红杏
+      - 🚀 一元加CF
+      - 🚀 波池1
+      - 🚀 波池2
+      - 🚀 红杏机场
+      - 香港
+      - 台湾
+      - 日本
+      - 新加坡
+      - 韩国
+      - 美国
+      - 其他
+      - DIRECT
+  - name: 🎞️ YouTube
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🚀 波池加红杏
+      - 🚀 波池1
+      - 🚀 波池2
+      - 🚀 红杏机场
+      - 香港
+      - 台湾
+      - 日本
+      - 新加坡
+      - 韩国
+      - 美国
+  - name: 🙋 Telegram
+    type: select
+    proxies:
+      - 🚀 一元加CF
+      - 🚀 节点选择
+      - 🚀 波池1
+      - 🚀 波池2
+      - 🚀 红杏机场
+  - name: ✨ AI
+    type: select
+    proxies:
+      - 美国
+      - 香港
+      - 台湾
+      - 日本
+      - 新加坡
+      - 韩国
+      - DIRECT
+  - name: 📘 GitHub
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🚀 波池加红杏
+      - 🚀 波池1
+      - 🚀 波池2
+      - 🚀 红杏机场
+      - DIRECT
+  - name: 🙋 Talkatone
+    type: select
+    proxies:
+      - 🙋 Talkatone节点
+      - DIRECT
+  - name: 🍎 Apple
+    type: select
+    proxies:
+      - DIRECT
+  - name: Ⓜ️ 微软Bing
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 香港
+      - 台湾
+      - 美国
+      - DIRECT
+  - name: Ⓜ️ 微软云盘
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 香港
+      - 台湾
+      - 日本
+      - 新加坡
+      - 韩国
+      - 美国
+      - 其他
+      - DIRECT
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+  - name: 🌍 国外
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+  - name: ➡️ 国内
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+
+# 节点测速组
+  - name: 🚀 波池加红杏
+    type: url-test
+    proxies:
+      - 波池1
+      - 波池2
+      - 红杏机场
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+  - name: 🚀 一元加CF
+    type: url-test
+    proxies:
+      - 一元
+      - CFnat
+      - CF
+      - MB
+    url: http://telegram.org/generate_204
+    interval: 60
+    tolerance: 0
+  - name: 🚀 波池1
+    type: url-test
+    proxies:
+      - 波池1
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+  - name: 🚀 波池2
+    type: url-test
+    proxies:
+      - 波池2
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+  - name: 🚀 红杏机场
+    type: url-test
+    proxies:
+      - 红杏机场
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+  - name: 🙋 Talkatone节点
+    type: url-test
+    proxies:
+      - 美国
+    url: http://www.google.com/generate_204
+    interval: 600
+    tolerance: 50
+  - name: 所有
+    type: url-test
+    proxies:
+      - ALL
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+  - name: 香港
+    type: url-test
+    proxies:
+      - 香港
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+  - name: 台湾
+    type: url-test
+    proxies:
+      - 台湾
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+  - name: 日本
+    type: url-test
+    proxies:
+      - 日本
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+  - name: 新加坡
+    type: url-test
+    proxies:
+      - 新加坡
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+  - name: 韩国
+    type: url-test
+    proxies:
+      - 韩国
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+  - name: 美国
+    type: url-test
+    proxies:
+      - 美国
+    url: http://www.google.com/generate_204
+    interval: 600
+    tolerance: 50
+  - name: 其他
+    type: url-test
+    proxies:
+      - 其他
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./ruleset/LocalAreaNetwork.list
+  Apple:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.list
+    path: ./ruleset/Apple.list
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
+    path: ./ruleset/GoogleFCM.list
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./ruleset/GoogleCN.list
+  Bing:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list
+    path: ./ruleset/Bing.list
+  OneDrive:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list
+    path: ./ruleset/OneDrive.list
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./ruleset/Microsoft.list
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+    path: ./ruleset/YouTube.list
+  AI:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list
+    path: ./ruleset/AI.list
+  OpenAi:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
+    path: ./ruleset/OpenAi.list
+  GitHub:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list
+    path: ./ruleset/GitHub.list
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./ruleset/Telegram.list
+  Talkatone:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/LOWERTOP/Shadowrocket-First/refs/heads/main/TalkatoneProxy.list
+    path: ./ruleset/TalkatoneProxy.list
+  ChinaMedia:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+    path: ./ruleset/ChinaMedia.list
+  ProxyMedia:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./ruleset/ProxyMedia.list
+  ProxyGFWlist:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+    path: ./ruleset/ProxyGFWlist.list
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./ruleset/ChinaDomain.list
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./ruleset/ChinaCompanyIp.list
+  Download:
+    type: http
+    behavior: classical
+    url: https://gb.yytv.eu.org/raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+    path: ./ruleset/Download.list
+
+rules:
+  - PROCESS-NAME,subs-check.exe,🎯 全球直连
+  - PROCESS-NAME,subs-check,🎯 全球直连
+  - RULE-SET,LocalAreaNetwork,➡️ 国内
+  - RULE-SET,Apple,🍎 Apple
+  - RULE-SET,GoogleFCM,➡️ 国内
+  - RULE-SET,GoogleCN,➡️ 国内
+  - RULE-SET,Bing,Ⓜ️ 微软Bing
+  - RULE-SET,OneDrive,Ⓜ️ 微软云盘
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,YouTube,🎞️ YouTube
+  - RULE-SET,AI,✨ AI
+  - RULE-SET,OpenAi,✨ AI
+  - RULE-SET,GitHub,📘 GitHub
+  - RULE-SET,Telegram,🙋 Telegram
+  - RULE-SET,Talkatone,🙋 Talkatone
+  - RULE-SET,ChinaMedia,➡️ 国内
+  - RULE-SET,ProxyMedia,🌍 国外
+  - RULE-SET,ProxyGFWlist,🌍 国外
+  - RULE-SET,ChinaDomain,➡️ 国内
+  - RULE-SET,ChinaCompanyIp,➡️ 国内
+  - RULE-SET,Download,➡️ 国内
+  - GEOIP,CN,➡️ 国内
+  - MATCH,🐟 漏网之鱼
