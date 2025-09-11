@@ -28,6 +28,7 @@ DOMAIN,dns.hostux.net
 DOMAIN,dns.ipv6dns.com
 DOMAIN,dns.keweon.center
 DOMAIN,dns.nextdns.io
+DOMAIN,dns.opendns.com
 DOMAIN,dns.quad9.net
 DOMAIN,dns.sb
 DOMAIN,dns.surfshark.com
@@ -94,6 +95,7 @@ DOMAIN,sm2.doh.pub
 DOMAIN,unfiltered.adguard-dns.com
 
 IP-CIDR,1.0.0.2/31,no-resolve
+IP-CIDR,1.0.0.1/32,no-resolve
 IP-CIDR,1.1.1.1/32,no-resolve
 IP-CIDR,1.1.1.2/31,no-resolve
 IP-CIDR,12.159.2.159/32,no-resolve
